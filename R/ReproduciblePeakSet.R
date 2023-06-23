@@ -735,7 +735,7 @@ addReproduciblePeakSet <- function(
 	################
 	peakParams$logFile <- logFile
 	summits <- do.call(.callSummitsMACS2, peakParams)
-	rmf <- file.remove(bedFile)
+	#rmf <- file.remove(bedFile)
 	
 	################
 	# Save output
@@ -793,7 +793,7 @@ addReproduciblePeakSet <- function(
 	out <- GRanges(out$V1, IRanges(out$V2 + 1, out$V3), score = out$V5)
 
 	#Remove Files
-	r2 <- suppressWarnings(file.remove(summitsFile, narrowPeaksFile, xlsFile))
+	#r2 <- suppressWarnings(file.remove(summitsFile, narrowPeaksFile, xlsFile))
 
 	return(out)
 
